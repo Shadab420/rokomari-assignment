@@ -16,6 +16,7 @@
     --gray-color: #eee;
     --sky-color: #0397D3;
     --white-color: #fff;
+    --btn-color: #FF1948;
 }
 
 html{
@@ -37,6 +38,11 @@ a{
 
 ul li{
 	list-style: none;
+}
+
+h1{
+    font-size: 4rem;
+    margin: 1rem;
 }
 
 
@@ -65,12 +71,20 @@ input:focus{
 /* *************** */
 
 .row{
-	max-width: 114rem;
-	margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.col{
+    display: inline-block;
+    width: 24.1%;
+    height: auto;
+    margin-left: 0.5%;
 }
 
 section{
-	padding: 8rem 0;
+    min-height: 37rem;
+    padding: 2rem;
 }
 
 
@@ -101,6 +115,34 @@ section{
     justify-content: space-between;
     align-items: center;
     width: 6%;
+}
+
+.img-responsive{
+    height: 100%;
+    width: 100%;
+}
+
+.btn{
+    height: 5rem;
+    width: 90%;
+    margin: 2rem;
+    border-radius: 10rem;
+    background: var(--btn-color);
+    color: var(--white-color);
+    border: none;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+}
+
+.btn:focus, .btn2:focus{
+    outline:none;
+}
+
+.btn:hover{
+    background: var(--white-color);
+    color: var(--btn-color);
+    border: 1px solid var(--btn-color);
 }
 
 /*START | Navbar styles */
@@ -174,7 +216,147 @@ section{
 /*END | Navbar styles */
 
 
+/*START | Slider section */
+
+.slider{
+    background: linear-gradient(to right, #180550, #9404E1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+}
+
+.slider-left{
+    height: 100%;
+    padding: 1rem;
+}
+
+.slider-left p{
+    color: var(--sky-color)
+}
+
+.slider-left h1{
+    color: var(--white-color);
+    font-size: 4rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+}
+
+/*END | Slider section */
+
+
+/*START | services section */
+
+.services{
+    background-image: url("../images/services/background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.single-service{
+    background: url("../images/services/services-backgrounds.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0.5rem 0.3rem 1rem 0.1rem var(--gray-color);
+    height: 100%;
+    padding: 2rem;
+}
+
+.service-img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50% 50%;
+    background: linear-gradient(#9404E1, #3F12D4 );
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.service-img img{
+    height: 3rem;
+    width: 3rem;
+}
+
+.single-service .btn{
+    width: 10rem;
+    height: 3rem;
+}
+
+/*END | services section */
+
+
+/*START | Courses section */
+
+.courses{
+    background-image: url("../images/courses/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 3rem;
+}
+
+.single-course{
+    background: var(--white-color);
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0.5rem 0.3rem 1rem 0.1rem var(--gray-color);
+    height: 100%;
+    padding: 2rem;
+}
+
+.btn2{
+    height: 5rem;
+    width: 20rem;
+    margin: 2rem;
+    border-radius: 10rem;
+    background: var(--white-color);
+    color: var(--btn-color);
+    border: 1px solid var(--btn-color);
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+}
+
+.btn2:hover{
+    
+    background: var(--btn-color);
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
+
+}
+
+/*END | Courses section */
+
+
+/*Start | Footer section */
+
+footer{
+    background-image: url("../images/footer/background.png");
+    background-size: cover;
+    min-height: 40rem;
+    color: white;
+}
+
+.subscribe-row{
+    background: var(--white-color);
+    width: 70%;
+    margin-left: 15%;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    color: blue;
+}
+
+
+/*END | Footer section */
+
+
 /* Media Queries */
+
+
+@media screen and (max-width: 1024px){
+    .col{
+        width: 32.3%;
+    }
+}
+
 @media screen and (max-width: 992px ){
 
     .navbar{
@@ -198,4 +380,16 @@ section{
         display: block;
     }
 
+}
+
+@media screen and (max-width: 500px){
+    .col{
+        width: 48.8%;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .col{
+        width: 100%;
+    }
 }
